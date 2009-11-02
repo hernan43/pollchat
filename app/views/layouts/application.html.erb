@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+	<%= javascript_include_tag :defaults %>
+	
+	<%= stylesheet_link_tag("site") %>
+
+	<title><%= yield :title %></title>
+	<% if params[:slug] %>
+		<%= orbited_javascript %>
+		<%= stomp_connect(params[:slug]) %>
+	<% end %>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+	<div id="header"></div>
+
+
+	<div id="main">
+	
+		<% if not flash[:notice].nil? %>
+		<div id="alert"><p class="notice"><%= flash[:notice] %></p></div> 
+		<% end %>
+		<% if not flash[:error].nil? %>
+		<div id="alert"><p class="warning"><%= flash[:error] %></p></div>
+		<% end %>
+	
+		<%= yield %>
+	</div>
+
+
+	<div id="footer"></div>
+
+<div>
+
+</body>
+</html>

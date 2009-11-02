@@ -1,0 +1,12 @@
+<h1>Editing channel</h1>
+
+<% form_for(@channel) do |f| %>
+	<%= render :partial => 'form', :locals => {:f => f} %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @channel %> |
+<%= link_to 'Back', channels_path %>

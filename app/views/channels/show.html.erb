@@ -1,0 +1,12 @@
+<h1>
+  #<%=h @channel.name %>
+</h1>
+
+<div id="messages_container">
+	<ul id="messages">
+	<%= render :partial => 'message', :collection => @channel.messages %>
+	</ul>
+</div>
+<div id="message_form">
+	<%= render :partial => 'messages/form' %>
+</div>
