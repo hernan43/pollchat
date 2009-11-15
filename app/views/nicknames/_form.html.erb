@@ -1,0 +1,4 @@
+<% form_tag nicknames_path do %>
+	<%= text_field_tag :nickname, session[:nickname] %>
+	<%= submit_tag "set nickname" %>
+<% end %>

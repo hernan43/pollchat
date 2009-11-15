@@ -1,0 +1,43 @@
+div#messages_container {
+	background: #111111;
+	color: #ffffff;
+	height: 500px;
+	overflow: scroll;
+}
+
+#messages {
+	font-family: Andale Mono, Courier New, monospace;
+}
+
+#messages li {
+	list-style: none;
+}
+
+#message_form input{
+	font-size: 1.5em;
+}
+
+#message_form input[type=text] {
+	color: #333333;
+	width: 600px;
+}
+
+#wrapper {
+	width: 1000px;
+}
+
+.nickname {
+	display:-moz-inline-block; display:-moz-inline-box; display:inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: right;
+	vertical-align: text-top;
+	white-space: nowrap;
+	width: 150px;
+}
+
+.message {
+	display:-moz-inline-block; display:-moz-inline-box; display:inline-block;
+	vertical-align: text-top;
+	width: 700px;
+}

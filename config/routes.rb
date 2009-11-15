@@ -2,6 +2,8 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :channels, :except => :show, :has_many => :messages
   map.slug '/channel/:slug', :controller => 'channels', :action => 'show'
 
+  map.resources :nicknames, :only => :create
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
