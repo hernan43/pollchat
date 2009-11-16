@@ -11,8 +11,14 @@
 	<title><%= yield :title %></title>
 	<% if params[:slug] %>
 		<%= orbited_javascript %>
-		<%= stomp_connect(params[:slug]) %>
+		<%= stomp_connect(params[:slug], :js => :jquery) %>
 	<% end %>
+	
+	<script type="text/javascript" charset="utf-8">
+		$(document).ready(function() {
+			scroll_to_bottom();
+		});
+	</script>
 </head>
 
 <body>
