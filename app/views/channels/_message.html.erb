@@ -5,4 +5,5 @@
 	<span class="message">
 	<%=h message.content %>
 	</span>
+	<span class="timestamp"><%= time_ago_in_words(message.created_at) %> ago</span>
 </li>

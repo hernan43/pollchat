@@ -7,6 +7,7 @@ div#messages_container {
 
 #messages {
 	font-family: Andale Mono, Courier New, monospace;
+	font-size: 1.2em;
 }
 
 #messages li {
@@ -39,5 +40,10 @@ div#messages_container {
 .message {
 	display:-moz-inline-block; display:-moz-inline-box; display:inline-block;
 	vertical-align: text-top;
-	width: 700px;
+	width: 600px;
+}
+
+.timestamp { 
+	color: #333333;
+	float: right;
 }
