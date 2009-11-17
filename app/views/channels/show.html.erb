@@ -1,7 +1,14 @@
 <h1>
   #<%=h @channel.name %> (<%= link_to "csv", slug_path(@channel.slug, :format => 'csv') %>)
 </h1>
-<h2>slug: <%=h @channel.slug %></h2>
+
+<p>
+	<strong>slug &raquo; <%= link_to @channel.slug, slug_url(@channel.slug) %></strong>
+</p>
+
+<p>
+	<strong>url &raquo; <%= link_to slug_url(@channel.slug) %></strong>
+</p>
 
 <div id="messages_container">
 	<ul id="messages">

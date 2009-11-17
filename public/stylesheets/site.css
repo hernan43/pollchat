@@ -1,12 +1,12 @@
 /* http://kuler.adobe.com/#themeID/635451 */
 body {
 	background: #01282e;
-	color: #333333;
+	color: #7fb535;
 	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
 }
 
 a {
-	color: #7FB535;
+	color: #7fb535;
 	text-decoration: none;
 }
 
@@ -22,10 +22,30 @@ input{
 	font-size: 1.2em;
 }
 
+#header a {
+	color: #ff7c2e;
+	text-decoration: none;
+}
+
+#header h1 {
+	margin-bottom: 0px;
+}
+
+#header p {
+	margin-top: 0px;
+}
+
+#main {
+	background: #ffffff;
+	border: 1px solid #77bb33;
+	color: #333333;
+	padding: 10px;
+}
+
 div#messages_container {
 	background: #111111;
 	color: #ffffff;
-	height: 500px;
+	height: 450px;
 	overflow: scroll;
 }
 
@@ -49,12 +69,11 @@ ul#messages {
 }
 
 #wrapper {
-	background: #ffffff;
-	border: 1px solid #77bb33;
 	margin: auto;
-	padding: 10px;
 	width: 1000px;
 }
+
+.callout { color: #10556D; }
 
 .fieldWithErrors {
 	border: 2px solid #ee0000;
