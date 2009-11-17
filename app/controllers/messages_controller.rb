@@ -35,6 +35,6 @@ class MessagesController < ApplicationController
       page[:new_message].reset
     end
     # sends messages to orbited
-    Orbited.send_data(message.channel.name, orbited_data)
+    Orbited.send_data(message.channel.slug, orbited_data)
   end
 end
