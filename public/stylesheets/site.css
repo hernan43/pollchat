@@ -1,6 +1,8 @@
+/* http://kuler.adobe.com/#themeID/635451 */
 body {
 	background: #01282e;
 	color: #333333;
+	font-family:"Lucida Grande", "Lucida Sans Unicode", Verdana, Arial, Helvetica, sans-serif;
 }
 
 a {
@@ -48,6 +50,7 @@ ul#messages {
 
 #wrapper {
 	background: #ffffff;
+	border: 1px solid #77bb33;
 	margin: auto;
 	padding: 10px;
 	width: 1000px;
