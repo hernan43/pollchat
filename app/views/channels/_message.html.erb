@@ -1,5 +1,5 @@
 <li>
-	<span class="nickname">
+	<span class="nickname" style="color: <%= get_existing_or_random_color(message.nickname) %>;">
 	<%=h message.nickname %> 
 	</span>
 	<span class="message">
