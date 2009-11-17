@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :channels, :except => :show, :has_many => :messages
-  map.slug '/channel/:slug', :controller => 'channels', :action => 'show'
+  map.slug '/channel/:slug.:format', :controller => 'channels', :action => 'show'
 
   map.resources :nicknames, :only => :create
   

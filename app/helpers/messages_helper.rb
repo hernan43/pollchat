@@ -1,5 +1,6 @@
 module MessagesHelper
   def get_existing_or_random_color(nick)
+    # copied a bunch of the tango color scheme colors
     colors = [
       '#fec94f',
       '#edd400',
@@ -27,6 +28,7 @@ module MessagesHelper
       '#babdb6'
       ]
 
+      # use existing color or set it to a random one
       session[nick] = session[nick] || colors[rand(colors.length)]
   end
 end

@@ -1,5 +1,7 @@
 class Channel < ActiveRecord::Base
   has_many :messages
+
+  #validates_uniqueness_of :name, :on => :create, :message => "must be unique"
   
   before_save :slugify_name
   before_save :set_name_if_empty

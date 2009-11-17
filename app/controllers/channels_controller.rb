@@ -17,6 +17,12 @@ class ChannelsController < ApplicationController
     @message = Message.new
 
     respond_to do |format|
+      format.csv { 
+        send_data channel_to_csv(@channel),
+          :type => "text/plain",
+          :filename => "#{@channel.slug}.csv",
+          :disposition => 'inline'
+      }
       format.html # show.html.erb
       format.xml  { render :xml => @channel }
     end
@@ -45,8 +51,8 @@ class ChannelsController < ApplicationController
 
     respond_to do |format|
       if @channel.save
-        flash[:notice] = 'Channel was successfully created.'
-        format.html { redirect_to(@channel) }
+        #flash[:notice] = 'Channel was successfully created.'
+        format.html { redirect_to(slug_path(@channel.slug)) }
         format.xml  { render :xml => @channel, :status => :created, :location => @channel }
       else
         format.html { render :action => "new" }
@@ -81,6 +87,17 @@ class ChannelsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to(channels_url) }
       format.xml  { head :ok }
+    end
+  end
+  
+  private
+  
+  def channel_to_csv(channel)
+    FasterCSV.generate do |csv|
+      csv << ["created_at", "nickname", "message"]
+      channel.messages.each do |message|
+        csv << [message.created_at, message.nickname, message.content]
+      end
     end
   end
 end

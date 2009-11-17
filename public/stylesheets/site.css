@@ -1,3 +1,21 @@
+body {
+	background: #01282e;
+	color: #333333;
+}
+
+a {
+	color: #7FB535;
+	text-decoration: none;
+}
+
+h1,h2,h3,h4,h5 {
+	color: #ff7c2e;
+}
+
+h1 {
+	margin-top: 0px;
+}
+
 input{
 	font-size: 1.2em;
 }
@@ -29,7 +47,9 @@ ul#messages {
 }
 
 #wrapper {
+	background: #ffffff;
 	margin: auto;
+	padding: 10px;
 	width: 1000px;
 }
 
@@ -55,4 +75,22 @@ ul#messages {
 	text-align: right;
 	text-overflow: ellipsis;
 	width: 150px;
+}
+
+.warning {
+	background: #ff7373;
+	border-top: 2px solid #a60000;
+	border-bottom: 2px solid #a60000;
+	text-align: center;
+	margin: 10px auto;
+	padding: 5px 20px;
+}
+
+.notice {
+	background: #FFF6BF;
+	border-top: 2px solid #FFD324;
+	border-bottom: 2px solid #FFD324;
+	text-align: center;
+	margin: 10px auto;
+	padding: 5px 20px;
 }
