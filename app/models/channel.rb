@@ -1,9 +1,9 @@
 class Channel < ActiveRecord::Base
   has_many :messages
 
-  #validates_uniqueness_of :name, :on => :create, :message => "must be unique"
+  validates_uniqueness_of :slug, :on => :create, :allow_nil => true, :message => "must be unique"
   
-  before_save :slugify_name
+  before_validation :slugify_name
   before_save :set_name_if_empty
   
   private
@@ -13,6 +13,6 @@ class Channel < ActiveRecord::Base
   end
   
   def slugify_name
-    self.slug = self.name.parameterize.to_s if not self.name.nil?
+    self.slug = self.name.parameterize.to_s if not self.name.nil? and self.slug.nil?
   end  
 end

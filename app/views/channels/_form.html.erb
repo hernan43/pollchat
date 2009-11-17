@@ -1,5 +1,9 @@
 	<p>
 		<%= f.error_messages %>
 	</p>
-	
-    <%= f.label :name %> <%= f.text_field :name %>
+	<p>
+    <%= f.label :name, "channel name" %> <%= f.text_field :name %>
+	</p>
+	<p>
+	<%= f.label :slug, "slug(optional)" %> <%= f.text_field :slug, :size => 16 %>
+	</p>

@@ -56,6 +56,13 @@ ul#messages {
 	width: 1000px;
 }
 
+.fieldWithErrors {
+	border: 2px solid #ee0000;
+	display: inline;
+	padding: 10px;
+	margin: 0px;
+}
+
 .nickname {
 	display:-moz-inline-block; display:-moz-inline-box; display:inline-block;
 	overflow: hidden;

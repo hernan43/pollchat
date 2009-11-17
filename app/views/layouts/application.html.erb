@@ -5,6 +5,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<%= javascript_include_tag :defaults %>
+	<%= javascript_include_tag "cufon-yui" %>
+	<%= javascript_include_tag "delicious.font" %>
+	
+	<script type="text/javascript">
+	Cufon.replace('h1');
+	Cufon.replace('h2');
+	Cufon.replace('h3');
+	</script>
 	
 	<%= stylesheet_link_tag("site") %>
 
@@ -43,5 +51,6 @@
 
 <div>
 
+<script type="text/javascript"> Cufon.now(); </script>
 </body>
 </html>
