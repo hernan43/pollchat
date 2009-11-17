@@ -1,5 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
   map.resources :channels, :except => [:show, :update, :destroy], :has_many => :messages
+  map.slug_join '/channel/', :controller => 'channels', :action => 'join'
   map.slug '/channel/:slug.:format', :controller => 'channels', :action => 'show'
 
   map.resources :nicknames, :only => :create

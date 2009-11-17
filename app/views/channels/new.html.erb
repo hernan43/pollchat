@@ -1,6 +1,19 @@
-<h1>Start or join a channel</h1>
-
+<h1>Start a channel</h1>
+<p>
 <% form_for(@channel) do |f| %>
 	<%= render :partial => 'form', :locals => {:f => f} %>
     <%= f.submit 'Create' %>
 <% end %>
+</p>
+
+<h2>&gt; OR &lt;</h2>
+
+<h1>Join a channel</h1>
+
+<p>
+<% form_tag(slug_join_path, :method => :get) do %>
+	<%= label_tag 'slug', 'slug of channel' %>
+	<%= text_field_tag 'slug' %>
+	<%= submit_tag 'join' %>
+<% end %>
+</p>

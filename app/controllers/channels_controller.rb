@@ -10,6 +10,10 @@ class ChannelsController < ApplicationController
     end
   end
 
+  def join
+    redirect_to(slug_url(params[:slug]))
+  end
+
   # GET /channels/1
   # GET /channels/1.xml
   def show
