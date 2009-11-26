@@ -31,7 +31,6 @@ class MessagesController < ApplicationController
     orbited_data = render_to_string :update do |page|
       page.insert_html :bottom, 'messages', :partial => 'channels/message', :locals => {:message => message}
       page.call 'scroll_to_bottom'
-      #page['message_form'].down('form').reset
       page[:new_message].reset
     end
     # sends messages to orbited

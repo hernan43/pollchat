@@ -1,0 +1,2 @@
+page[:nickname].value = session[:nickname]
+page.visual_effect :highlight, 'nickname'
