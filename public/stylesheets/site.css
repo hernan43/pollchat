@@ -26,6 +26,10 @@ input{
 	font-size: 1.2em;
 }
 
+input:focus {
+	background: #ffff00;
+}
+
 #header a {
 	color: #ff7c2e;
 	text-decoration: none;
