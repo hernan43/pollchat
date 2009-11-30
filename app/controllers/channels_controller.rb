@@ -26,7 +26,7 @@ class ChannelsController < ApplicationController
           :type => "text/plain",
           :filename => "#{@channel.slug}.csv",
           :disposition => 'inline'
-      }
+      } if params[:format] == 'csv' # no matter what I did in routes.rb IE still picked this 
       format.html # show.html.erb
       format.xml  { render :xml => @channel }
     end
